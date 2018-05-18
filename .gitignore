@@ -3,7 +3,6 @@
 build/
 .gradle/
 gradle/
-gradlew
 # Git Files
 !.gitignore
 
