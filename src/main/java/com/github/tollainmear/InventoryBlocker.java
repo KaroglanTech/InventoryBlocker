@@ -2,9 +2,14 @@ package com.github.tollainmear;
 
 import com.github.tollainmear.utilites.InvBListener;
 import org.spongepowered.api.Sponge;
+import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.event.Listener;
+import org.spongepowered.api.event.filter.cause.First;
 import org.spongepowered.api.event.game.state.GameStartedServerEvent;
+import org.spongepowered.api.event.item.inventory.InteractInventoryEvent;
+import org.spongepowered.api.event.item.inventory.TargetInventoryEvent;
 import org.spongepowered.api.plugin.Plugin;
+import org.spongepowered.api.text.Text;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -26,7 +31,6 @@ public class InventoryBlocker {
         listener = new InvBListener(this);
         Sponge.getEventManager().registerListeners(this,listener);
     }
-
 
     public Map<String, Long> getBlockedMap() {
         return blockedMap;
